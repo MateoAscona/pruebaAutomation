@@ -12,7 +12,6 @@ public class TestAutomation {
         // Inicialización del WebDriver
         DriverManager.create("Chrome");
 
-        // Escenario 1: Validar que se pregunte si el asociado solicita el envío de facturas al dar de alta un nuevo caso Tipo Facturación
         DriverManager.getDriver().get("https://sancorsalud--uatqa.sandbox.my.salesforce.com"
                 );
 
@@ -21,7 +20,7 @@ public class TestAutomation {
         MainService mainService = new MainService();
         CaseService caseService = new CaseService();
 
-        loginService.iniciar_sesion("manuel.chavez@sancorsalud.com.ar.uatqa", "Manuel2311");
+        loginService.iniciar_sesion("mateo.ascona@sancorsalud.com.ar.uatqa", "Mate24695");
 
 
 

@@ -33,7 +33,7 @@ public class CrearNuevoCasoSteps {
     @Given("El oficial esta logueado")
     public void oficialDaDeAltaUnNuevoCasoTipoFacturación() {
 
-        loginService.iniciar_sesion("manuel.chavez@sancorsalud.com.ar.uatqa", "Manuel2311");
+        loginService.iniciar_sesion("mateo.ascona@sancorsalud.com.ar.uatqa", "Mate24695");
     }
 
     @When("Se crea un nuevo caso tipo facturacion")
@@ -47,8 +47,11 @@ public class CrearNuevoCasoSteps {
         caseService.click_nuevoCasoFacturacion();
         caseService.click_nuevoCasoFacturacionSiguiente();
         caseService.select_tipo();
+        caseService.select_tipoOpt();
         caseService.select_origen();
+        caseService.select_origenOpt();
         caseService.completar_campo_cuenta();
+        caseService.click_guardar();
     }
 
     @Then("se espera la respuesta del asistente")
