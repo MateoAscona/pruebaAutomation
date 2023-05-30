@@ -10,12 +10,14 @@ import java.time.Duration;
 public class DriverManager {
     private static WebDriver driver;
     private static WebDriverWait wait;
+    private static WebDriverWait longWait;
 
     public static void create(String browser) {
         // Creamos el driver con el browser deseado
         driver = WebDriverManager.getInstance(browser).create();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        longWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public static WebDriver getDriver(){
@@ -24,6 +26,10 @@ public class DriverManager {
 
     public static WebDriverWait getWait() {
         return wait;
+    }
+
+    public static WebDriverWait getLongWait() {
+        return longWait;
     }
 
     public static void ingresarTexto(WebElement elemento, String texto) {

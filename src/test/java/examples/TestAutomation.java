@@ -1,6 +1,7 @@
 package examples;
 
 import examples.config.DriverManager;
+import examples.pages.CaseService;
 import examples.pages.LoginService;
 import examples.pages.MainService;
 import org.openqa.selenium.By;
@@ -21,6 +22,7 @@ public class TestAutomation {
 
         LoginService loginService = new LoginService();
         MainService mainService = new MainService();
+        CaseService caseService = new CaseService();
 
         loginService.iniciar_sesion("mateo.ascona@sancorsalud.com.ar.uatqa", "Mate24695");
 
@@ -28,8 +30,23 @@ public class TestAutomation {
 
         mainService.click_waffle();
         mainService.click_agente();
+        Thread.sleep(5000);
         mainService.click_secciones();
         mainService.click_casos();
+
+        caseService.click_nuevoCaso();
+        caseService.click_nuevoCasoFacturacion();
+        caseService.click_nuevoCasoFacturacionSiguiente();
+        caseService.select_tipo();
+        caseService.select_tipoOpt();
+        caseService.select_origen();
+        caseService.select_origenOpt();
+
+        caseService.click_guardar();
+
+
+
+
               // Pasos
         /*WebElement oficial = driver.findElement(By.id("oficial"));
         oficial.click();
