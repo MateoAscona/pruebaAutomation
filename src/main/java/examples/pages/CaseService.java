@@ -31,6 +31,18 @@ public class CaseService {
         DriverManager.getDriver().findElement(this.casePage.getCaso_facturacion_siguiente()).click();
     }
 
+    public void completar_campo_cuenta(){
+        DriverManager.getWait().until(
+                ExpectedConditions.elementToBeClickable(this.casePage.getCampoCase())
+        );
+        DriverManager.getDriver().findElement(this.casePage.getCampoCase()).sendKeys("ABAD JUAN MIGUEL CABAIL");
+        DriverManager.getWait().until(
+                ExpectedConditions.elementToBeClickable(this.casePage.getNombrePersona())
+        );
+
+        DriverManager.getDriver().findElement(this.casePage.getNombrePersona()).click();
+    }
+
     public void select_tipo(){
         DriverManager.getWait().until(
                 ExpectedConditions.elementToBeClickable(this.casePage.getSelect_tipo())
