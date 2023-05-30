@@ -4,10 +4,7 @@ import examples.config.DriverManager;
 import examples.pages.CaseService;
 import examples.pages.LoginService;
 import examples.pages.MainService;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class TestAutomation {
     public static void main(String[] args) throws InterruptedException {
