@@ -24,7 +24,7 @@ public class TestAutomation {
         MainService mainService = new MainService();
         CaseService caseService = new CaseService();
 
-        loginService.iniciar_sesion("mateo.ascona@sancorsalud.com.ar.uatqa", "Mate24695");
+        loginService.iniciar_sesion("manuel.chavez@sancorsalud.com.ar.uatqa", "Manuel2311");
 
 
 
